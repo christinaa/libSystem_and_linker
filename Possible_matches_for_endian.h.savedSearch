@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CompatibleVersion</key>
+	<integer>1</integer>
+	<key>RawQuery</key>
+	<string>((true) &amp;&amp; (((* = "endian.h*"cdw || kMDItemTextContent = "endian.h*"cdw) &amp;&amp; ((kMDItemKind = "C*"cdw) &amp;&amp; ((kMDItemKind = "Header*"cdw) &amp;&amp; ((kMDItemKind = "Source*"cdw) &amp;&amp; (kMDItemKind = "File*"cdw))))))) &amp;&amp; ((kMDItemDisplayName = "endian.h*"cdw))</string>
+	<key>RawQueryDict</key>
+	<dict>
+		<key>FinderFilesOnly</key>
+		<false/>
+		<key>RawQuery</key>
+		<string>((true) &amp;&amp; (((* = "endian.h*"cdw || kMDItemTextContent = "endian.h*"cdw) &amp;&amp; ((kMDItemKind = "C*"cdw) &amp;&amp; ((kMDItemKind = "Header*"cdw) &amp;&amp; ((kMDItemKind = "Source*"cdw) &amp;&amp; (kMDItemKind = "File*"cdw))))))) &amp;&amp; ((kMDItemDisplayName = "endian.h*"cdw))</string>
+		<key>SearchScopes</key>
+		<array>
+			<string>kMDQueryScopeComputer</string>
+		</array>
+		<key>UserFilesOnly</key>
+		<true/>
+	</dict>
+	<key>SearchCriteria</key>
+	<dict>
+		<key>AnyAttributeContains</key>
+		<string>endian.h</string>
+		<key>CurrentFolderPath</key>
+		<array>
+			<string>/Users/ericgallager</string>
+		</array>
+		<key>FXCriteriaSlices</key>
+		<array>
+			<dict>
+				<key>criteria</key>
+				<array>
+					<string>com_apple_UserSearchStringAttribute</string>
+					<integer>104</integer>
+				</array>
+				<key>displayValues</key>
+				<array>
+					<string>Items matching text</string>
+					<string>endian.h</string>
+				</array>
+				<key>rowType</key>
+				<integer>0</integer>
+				<key>subrows</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>criteria</key>
+				<array>
+					<string>kMDItemKind</string>
+					<integer>300</integer>
+					<integer>417</integer>
+					<integer>104</integer>
+				</array>
+				<key>displayValues</key>
+				<array>
+					<string>Kind</string>
+					<string>is</string>
+					<string>other</string>
+					<string>C Header Source File</string>
+				</array>
+				<key>rowType</key>
+				<integer>0</integer>
+				<key>subrows</key>
+				<array/>
+			</dict>
+		</array>
+		<key>FXScope</key>
+		<integer>1396925814</integer>
+		<key>FXScopeArrayOfPaths</key>
+		<array>
+			<string>kMDQueryScopeComputer</string>
+		</array>
+		<key>SearchNameOnly</key>
+		<true/>
+	</dict>
+</dict>
+</plist>

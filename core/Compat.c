@@ -13,3 +13,6 @@ compat_mode(const char *function, const char *mode) {
 	//OSLog("compat_mode(%s, %s)", function, mode);
 	return 1;
 }
+
+// newline! \n
+

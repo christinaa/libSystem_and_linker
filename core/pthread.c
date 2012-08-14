@@ -828,7 +828,8 @@ _pthread_start(pthread_t self, mach_port_t kport, void *(*fun)(void *), void * f
 {
 	printf("_pthread_start(%p, %d, %p, %p, %d, %d) \n", self, kport, fun, funarg, stacksize, pflags);
 	
-	int ret;
+	int ret = 0;
+	printf("\n ret = 0 \n"); // statement for debugging (also so something uses the variable "ret"
 #if WQ_DEBUG
 	pthread_t pself;
 #endif

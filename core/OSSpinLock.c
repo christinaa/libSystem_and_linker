@@ -51,3 +51,6 @@ void OSSpinLockUnlock(volatile OSSpinLock *__lock)
 {
 	lll_unlock((OSLowLock*)__lock);
 } 
+
+// newline! \n
+

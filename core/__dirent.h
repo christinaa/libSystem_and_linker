@@ -19,3 +19,6 @@
  * Hey hey, even more BSD retardation.
  */
 #include "_fbsd_compat_.h"
+
+// newline! \n
+

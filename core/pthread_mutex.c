@@ -71,7 +71,7 @@ int _pthread_mutex_init(pthread_mutex_t *mutex, const pthread_mutexattr_t *attr)
 #if  defined(__i386__) || defined(__x86_64__)
 #define USE_COMPAGE 1
 
-#include <machine/cpu_capabilities.h>
+#include "machine/cpu_capabilities.h"
 
 extern int _commpage_pthread_mutex_lock(uint32_t * lvalp, int flags, uint64_t mtid, uint32_t mask, uint64_t * tidp, int *sysret);
 

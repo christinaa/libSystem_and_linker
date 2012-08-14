@@ -21,7 +21,7 @@
 #include <mach-o/reloc.h>
 
 #ifndef _OPEN_SOURCE
-	#include <mach-o/arm/reloc.h>
+	#include "mach-o/arm/reloc.h"
 #else
 	#define ARM_RELOC_PB_LA_PTR 4
 #endif

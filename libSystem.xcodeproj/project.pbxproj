@@ -486,6 +486,9 @@
 		1426F86F15C56F35007DF98B /* Environ.c in Sources */ = {isa = PBXBuildFile; fileRef = 1426F86E15C56F35007DF98B /* Environ.c */; };
 		1426F87115C57402007DF98B /* _simple.c in Sources */ = {isa = PBXBuildFile; fileRef = 1426F87015C57402007DF98B /* _simple.c */; };
 		1426F87F15C5BEB0007DF98B /* ctypes_non_inline.c in Sources */ = {isa = PBXBuildFile; fileRef = 1426F87E15C5BEB0007DF98B /* ctypes_non_inline.c */; };
+		A5584B3315DACEBF00253B92 /* cpu_capabilities.h in Sources */ = {isa = PBXBuildFile; fileRef = A5584B3015DACE8500253B92 /* cpu_capabilities.h */; };
+		A5584B3415DACEBF00253B92 /* arch.h in Sources */ = {isa = PBXBuildFile; fileRef = A5584B2E15DACE4000253B92 /* arch.h */; };
+		A5584B3515DACEBF00253B92 /* reloc.h in Sources */ = {isa = PBXBuildFile; fileRef = A5584B2C15DACE2800253B92 /* reloc.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1055,6 +1058,10 @@
 		1426F87015C57402007DF98B /* _simple.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = _simple.c; sourceTree = "<group>"; };
 		1426F87215C57437007DF98B /* _simple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _simple.h; sourceTree = "<group>"; };
 		1426F87E15C5BEB0007DF98B /* ctypes_non_inline.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ctypes_non_inline.c; sourceTree = "<group>"; };
+		A5584B2C15DACE2800253B92 /* reloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reloc.h; sourceTree = "<group>"; };
+		A5584B2E15DACE4000253B92 /* arch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arch.h; sourceTree = "<group>"; };
+		A5584B3015DACE8500253B92 /* cpu_capabilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpu_capabilities.h; sourceTree = "<group>"; };
+		A5584B9715DACFDE00253B92 /* Possible_matches_for_endian.h.savedSearch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Possible_matches_for_endian.h.savedSearch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1484,6 +1491,10 @@
 		01645F5C15371DFB0006A0C1 = {
 			isa = PBXGroup;
 			children = (
+				A5584B9715DACFDE00253B92 /* Possible_matches_for_endian.h.savedSearch */,
+				A5584B2F15DACE8500253B92 /* machine */,
+				A5584B2D15DACE4000253B92 /* arm */,
+				A5584B2A15DACE2800253B92 /* mach-o */,
 				01C4BDC21597A13B00A44508 /* Misc */,
 				01B9D0B0153F080400912822 /* LibClangRt */,
 				01BAB921154C02A900ACF9DA /* LibMachO */,
@@ -2244,6 +2255,41 @@
 			name = Simple;
 			sourceTree = "<group>";
 		};
+		A5584B2A15DACE2800253B92 /* mach-o */ = {
+			isa = PBXGroup;
+			children = (
+				A5584B2B15DACE2800253B92 /* arm */,
+			);
+			name = "mach-o";
+			path = "core/mach-o";
+			sourceTree = "<group>";
+		};
+		A5584B2B15DACE2800253B92 /* arm */ = {
+			isa = PBXGroup;
+			children = (
+				A5584B2C15DACE2800253B92 /* reloc.h */,
+			);
+			path = arm;
+			sourceTree = "<group>";
+		};
+		A5584B2D15DACE4000253B92 /* arm */ = {
+			isa = PBXGroup;
+			children = (
+				A5584B2E15DACE4000253B92 /* arch.h */,
+			);
+			name = arm;
+			path = core/arm;
+			sourceTree = "<group>";
+		};
+		A5584B2F15DACE8500253B92 /* machine */ = {
+			isa = PBXGroup;
+			children = (
+				A5584B3015DACE8500253B92 /* cpu_capabilities.h */,
+			);
+			name = machine;
+			path = core/machine;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2310,6 +2356,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5584B3315DACEBF00253B92 /* cpu_capabilities.h in Sources */,
+				A5584B3415DACEBF00253B92 /* arch.h in Sources */,
+				A5584B3515DACEBF00253B92 /* reloc.h in Sources */,
 				01F50BC015B5A8E9006769F0 /* pthread.c in Sources */,
 				01F50BC115B5A8E9006769F0 /* pthread_rwlock.c in Sources */,
 				01F50BC215B5A8E9006769F0 /* pthread_mutex.c in Sources */,
@@ -2801,18 +2850,59 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_LINK_OBJC_RUNTIME = NO;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_OPENMP_SUPPORT = YES;
+				GCC_ALTIVEC_EXTENSIONS = YES;
+				GCC_AUTO_VECTORIZATION = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_EXCEPTIONS = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SSE41_EXTENSIONS = YES;
+				GCC_ENABLE_SSE42_EXTENSIONS = YES;
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_ENABLE_TRIGRAPHS = YES;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_GLOBAL_CONSTRUCTORS = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_EFFECTIVE_CPLUSPLUS_VIOLATIONS = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_PROTOTYPE_CONVERSION = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				SDKROOT = Use_Any_iPhoneOS_SDK;
+				GENERATE_PKGINFO_FILE = YES;
+				GENERATE_PROFILING_CODE = YES;
+				LD_GENERATE_MAP_FILE = YES;
+				MACH_O_TYPE = mh_execute;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -2844,14 +2934,14 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
 				GENERATE_MASTER_OBJECT_FILE = YES;
-				INSTALL_OWNER = tina;
+				INSTALL_OWNER = root;
 				KEEP_PRIVATE_EXTERNS = YES;
+				LD_GENERATE_MAP_FILE = NO;
 				LD_NO_PIE = NO;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../launchd/DerivedData/launchd/Build/Products/Release-iphoneos\"",
 				);
-				MACH_O_TYPE = mh_execute;
 				OTHER_CFLAGS = (
 					"-D__no_acl__=1",
 					"-no-integrated-as",
@@ -2863,7 +2953,7 @@
 				PREBINDING = NO;
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = whatever;
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_BUILDER = asdf;
