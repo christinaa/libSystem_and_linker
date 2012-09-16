@@ -841,7 +841,8 @@ strcp_D2A(a, b) char *a; char *b;
 strcp_D2A(char *a, CONST char *b)
 #endif
 {
-	while(*a = *b++)
+	while((*a = *b++)) // not sure if should be == instead of =, putting extra parentheses in in the meantime
+
 		a++;
 	return a;
 	}

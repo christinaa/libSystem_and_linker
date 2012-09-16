@@ -25,7 +25,7 @@
 		<string>endian.h</string>
 		<key>CurrentFolderPath</key>
 		<array>
-			<string>/Users/ericgallager</string>
+			<string>~/</string>
 		</array>
 		<key>FXCriteriaSlices</key>
 		<array>
@@ -77,3 +77,4 @@
 	</dict>
 </dict>
 </plist>
+

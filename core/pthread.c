@@ -2549,7 +2549,7 @@ _pthread_work_internal_init(void)
 			TAILQ_INSERT_TAIL(&__pthread_workqueue_pool_head, &wq[i], wq_list);
 		}
 
-		if (error = __workq_open()) {
+		if ((error = __workq_open())) { // not sure if should be == instead of =, putting extra parentheses in in the meantime
 			TAILQ_INIT(&__pthread_workitem_pool_head);
 			TAILQ_INIT(&__pthread_workqueue_pool_head);
 			free(witemp);
