@@ -119,3 +119,6 @@ issetugid(void)
 	
 	return 0;
 }
+
+// newline! \n
+

@@ -213,3 +213,6 @@ vsprintf_l(char * restrict str, locale_t loc, const char * restrict format, va_l
 	LocaleNotImplemented();
 	return 0;
 }
+
+// newline! \n
+

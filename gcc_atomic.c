@@ -25,7 +25,7 @@
 
 #include <stdint.h>
 #include <libkern/OSAtomic.h>
-#include <arm/arch.h>
+#include "arm/arch.h"
 #include <stdbool.h>
 
 /*

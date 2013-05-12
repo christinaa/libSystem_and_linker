@@ -200,3 +200,6 @@ extern int __workq_kernreturn(int x, pthread_workitem_t wq, int x1, int x2)
 {
 	not_implemented();
 }
+
+// newline! \n
+

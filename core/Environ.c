@@ -82,3 +82,6 @@ const char *name;
     
 	return (__findenv(name, &offset, *_NSGetEnviron()));
 }
+
+// newline! \n
+

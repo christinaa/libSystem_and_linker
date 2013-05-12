@@ -158,3 +158,6 @@ int	socketpair(int a, int b, int c, int *d)
 {
 	ns_not_implemented(); /* [XXX][NR!?] */
 }
+
+// newline! \n
+

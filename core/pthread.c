@@ -828,7 +828,8 @@ _pthread_start(pthread_t self, mach_port_t kport, void *(*fun)(void *), void * f
 {
 	printf("_pthread_start(%p, %d, %p, %p, %d, %d) \n", self, kport, fun, funarg, stacksize, pflags);
 	
-	int ret;
+	int ret = 0;
+	printf("\n ret = 0 \n"); // statement for debugging (also so something uses the variable "ret"
 #if WQ_DEBUG
 	pthread_t pself;
 #endif
@@ -2548,7 +2549,7 @@ _pthread_work_internal_init(void)
 			TAILQ_INSERT_TAIL(&__pthread_workqueue_pool_head, &wq[i], wq_list);
 		}
 
-		if (error = __workq_open()) {
+		if ((error = __workq_open())) { // not sure if should be == instead of =, putting extra parentheses in in the meantime
 			TAILQ_INIT(&__pthread_workitem_pool_head);
 			TAILQ_INIT(&__pthread_workqueue_pool_head);
 			free(witemp);

@@ -24,3 +24,6 @@ listxattr(const char *path, char *namebuf, size_t size, int options)
 	errno = EPERM;
 	return -1;
 }
+
+// newline! \n
+

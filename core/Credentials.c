@@ -170,3 +170,6 @@ void *fgetgrent(FILE *stream)
 	bb_trace();
 	return NULL;
 }
+
+// newline! \n
+

@@ -104,3 +104,6 @@ void lll_lock(OSLowLock* futex) {
 		lll_lock_wait(futex);
 	}
 }
+
+// newline! \n
+

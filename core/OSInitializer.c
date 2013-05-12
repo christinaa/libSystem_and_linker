@@ -34,3 +34,6 @@ void OSInitializeMainRuntime(void) {
 	_OSThreadInitialize();
 	FakeLocaleInit();
 }
+
+// newline! \n
+
