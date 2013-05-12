@@ -148,3 +148,6 @@ void OSLogLib(const char* library, const char* format, ...)
 	
 	fflush(stdout);
 }
+
+// newline! \n
+

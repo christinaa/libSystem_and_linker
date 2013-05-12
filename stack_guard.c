@@ -16,3 +16,6 @@ __stack_chk_fail()
 {
 	OSHalt("__stack_chk_fail(): stack overflow?");
 }
+
+// newline! \n
+

@@ -72,3 +72,6 @@ int raise(int signum)
 {
     return kill(gettid(), signum);
 }
+
+// newline! \n
+

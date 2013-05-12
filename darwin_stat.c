@@ -129,3 +129,6 @@ int	stat(const char * path, struct stat * dst) {
 	
 	return rr;
 }
+
+// newline! \n
+

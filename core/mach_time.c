@@ -29,3 +29,6 @@ uint64_t mach_absolute_time(void)
 {
 	return 0;
 }
+
+// newline! \n
+

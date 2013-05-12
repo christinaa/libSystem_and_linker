@@ -77,7 +77,8 @@ hexnan( CONST char **sp, FPI *fpi, ULong *x0)
 	if (s[1] == '0' && (s[2] == 'x' || s[2] == 'X')
 	 && *(CONST unsigned char*)(s+3) > ' ')
 		s += 2;
-	while(c = *(CONST unsigned char*)++s) {
+	while((c = *(CONST unsigned char*)++s)) { // not sure if should be == instead of =, putting extra parentheses in in the meantime
+
 		if (!(h = hexdig[c])) {
 			if (c <= ' ') {
 				if (hd0 < havedig) {
@@ -109,7 +110,8 @@ hexnan( CONST char **sp, FPI *fpi, ULong *x0)
 					*sp = s + 1;
 					break;
 					}
-				} while(c = *++s);
+			} while((c = *++s)); // not sure if should be == instead of =, putting extra parentheses in in the meantime
+
 #endif
 			return STRTOG_NaN;
 			}

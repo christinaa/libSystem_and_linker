@@ -55,3 +55,6 @@ int ___toupper_l(int c, void* somethingidontgiveashitabout)
 {
     return __toupper(c);
 }
+
+// newline! \n
+

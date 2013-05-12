@@ -36,3 +36,6 @@ __cmpdi2(di_int a, di_int b)
         return 2;
     return 1;
 }
+
+// newline! \n
+

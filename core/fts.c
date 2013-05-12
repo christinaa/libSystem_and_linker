@@ -457,7 +457,8 @@ fts_read(sp)
 
 	/* Move to the next node on this level. */
 next:	tmp = p;
-	if (p = p->fts_link) {
+	if ((p = p->fts_link)) { // not sure if should be == instead of =, putting extra parentheses in in the meantime
+
 		free(tmp);
 
 		/*
@@ -742,7 +743,8 @@ fts_build(sp, type)
 
 	/* Read the directory, attaching each entry to the `link' pointer. */
 	adjaddr = NULL;
-	for (head = tail = NULL, nitems = 0; dp = readdir(dirp);) {
+	for ((head = tail = NULL), (nitems = 0); (dp = readdir(dirp));) { // not sure if should be == instead of =, putting extra parentheses in in the meantime
+
 		if (!ISSET(FTS_SEEDOT) && ISDOT(dp->d_name))
 			continue;
 
@@ -1058,7 +1060,8 @@ fts_lfree(head)
 	register FTSENT *p;
 
 	/* Free a linked list of structures. */
-	while (p = head) {
+	while ((p = head)) { // not sure if should be == instead of =, putting extra parentheses in in the meantime
+
 		head = head->fts_link;
 		free(p);
 	}

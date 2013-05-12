@@ -34,3 +34,6 @@ void vsyslog(int priority, const char *message, va_list args)
 {
 	
 }
+
+// newline! \n
+

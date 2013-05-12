@@ -47,3 +47,6 @@ kern_return_t vm_remap
 {
 	OSHalt("vm_remap: Not implemented.");
 }
+
+// newline! \n
+
